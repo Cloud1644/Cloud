@@ -20,9 +20,9 @@ class HomeController extends AbstractController
      */
     public function indexPageAction(): Response
     {
-        $products = $this->repo->findAll();
+        $product = $this->repo->findAll();
         return $this->render('home.html.twig', [
-            'products'=>$products
+            'products'=>$product
         ]);
     }
      /**
