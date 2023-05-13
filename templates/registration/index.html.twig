@@ -1,0 +1,14 @@
+{% extends 'home.html.twig' %}
+
+{% block title %}Registration{% endblock %}
+
+{% block body %}
+<h1 class="h3 mb-3 font-weight-normal"
+    style="text-align:center">Register</h1>
+<div class="container" style="width:500px;">
+    {{ form_start(registrationForm) }}
+    {{ form_widget(registrationForm) }}
+    {{ form_end(registrationForm) }}
+</div>
+{% endblock %}
+

@@ -1,0 +1,47 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Export{% endblock %}
+
+{% block body %}
+  <div className="page-heading pb-2 mt-4 mb-2 ">
+                    <h3>Export Product</h3> 
+                    <a href="/export/">
+                    <button type="button" class="btn btn-outline-primary">Back</button></a>
+                </div>
+                <div class="page-content">
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+               
+                </div>
+                <div class="card">
+                    <div class="container mb-3">
+                        <div class="table-responsive text-nowrap">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>#</th>                            
+                            <th>Product name</th>
+                            <th>Quantity</th>
+                          </tr>                         
+                        </thead>
+                        <tbody class="table-border-bottom-0">
+                          {% for e in orderDetails %}
+                          
+                              <tr>
+                                  <td>{{ e.id}}</td>
+                                  <td>{{ e.name}}</td>
+                                  <td>{{ e.ExQuantity}}</td>                          
+                              </tr>
+                          {% endfor %}
+                          <tr>
+                          <th>Total Price :</th>
+                              <td>{{ exs[0]['Total_Price']}}</td> 
+                              </tr>  
+                        </tbody>
+                       
+                       
+                      </table>
+                    </div>
+                </div>
+                </div>
+                </div>
+{% endblock %}

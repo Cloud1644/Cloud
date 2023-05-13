@@ -1,0 +1,47 @@
+{% extends "admin.html.twig" %}
+{% block title %}
+    Admin Page - Export
+{% endblock %}
+{% block body %}
+      <div className="page-heading pb-2 mt-4 mb-2 ">
+                <h3>Export Order</h3> <a href="/export/"><button type="button" class="btn btn-outline-primary">Back</button></a>
+            </div>
+            <div class="page-content mt-4">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            {# <form class="form form-vertical" method="POST" action="#"> #}
+                            {{ form_start(form,{'attr':{'class':'form form-vertical'}} ) }}
+                                <div class="form-body">
+                                    <div class="row">
+                                    
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="first-name-vertical">User Name</label>
+                                                {{ form_widget(form.ExUser, {'attr':{'placeholder':'User name'}}) }}
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="first-name-vertical">Time</label>
+                                                {{ form_widget(form.time, {'attr':{'placeholder':'Date'}}) }}
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-12 d-flex justify-content-end pt-2">
+                                        
+                                            {{ form_widget(form.save,{'attr':{'class':'btn btn-primary me-2'}}) }}
+                                          <button type="reset"
+                                                class="btn btn-secondary">Reset</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            {# </form> #}
+                            {{ form_end(form) }}
+                        </div> <!--card body-->
+                    
+                    </div> <!--card content-->
+                </div> <!--card-->
+            </div><!--page content-->
+{% endblock %}

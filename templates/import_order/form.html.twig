@@ -1,0 +1,23 @@
+{% extends "admin.html.twig" %}
+{% block title %}
+    Admin Page - Import
+{% endblock %}
+{% block body %}
+      <div className="page-heading pb-2 mt-4 mb-2 ">
+                <h3>Import Order</h3> 
+                <a href="/import/"><button type="button" class="btn btn-outline-primary">Back</button></a>          
+            <div class="page-content mt-4">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            {# <form class="form form-vertical" method="POST" action="#"> #}
+                            {{ form_start(form) }}
+                            {{ form_widget(form) }}
+                            {{ form_end(form) }}
+                        </div> <!--card body-->
+                    
+                    </div> <!--card content-->
+                </div> <!--card-->
+            </div><!--page content-->
+        </div>
+{% endblock %}
