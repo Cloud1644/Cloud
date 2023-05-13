@@ -27,9 +27,9 @@ class BrandController extends AbstractController
      */
     public function readAllCatAction(): Response
     {
-        $brands = $this->repo->findAll();
+        $brand = $this->repo->findAll();
         return $this->render('brand/index.html.twig', [
-            'brands'=>$brands
+            'brands'=>$brand
         ]);
     }
 
