@@ -20,9 +20,9 @@ class SearchController extends AbstractController
     public function searchByNameAction(ProductRepository $repo, Request $req): Response
     {
         $names = $req->query->get('name');
-        $prods = $repo->searchByName($names);
+        $products = $repo->searchByName($names);
         return $this->render('home.html.twig', [
-            'products'=>$prods
+            'products'=>$products
         ]);
     }
     // /**
