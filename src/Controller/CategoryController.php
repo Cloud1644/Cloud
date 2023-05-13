@@ -27,9 +27,9 @@ class CategoryController extends AbstractController
      */
     public function readAllCatAction(): Response
     {
-        $categories = $this->repo->findAll();
+        $category = $this->repo->findAll();
         return $this->render('category/index.html.twig', [
-            'categories'=>$categories
+            'categories'=>$category
         ]);
     }
 
