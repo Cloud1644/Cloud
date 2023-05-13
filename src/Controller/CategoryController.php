@@ -55,12 +55,12 @@ class CategoryController extends AbstractController
      /**
      * @Route("/edit/{id}", name="category_edit",requirements={"id"="\d+"})
      */
-    public function editAction(Request $req, Category $c): Response
+    public function editAction(Request $request, Category $c): Response
     {
         
         $form = $this->createForm(CategoryType::class, $c);   
 
-        $form->handleRequest($req);
+        $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
 
             $this->repo->add($c,true);
